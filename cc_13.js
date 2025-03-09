@@ -65,3 +65,15 @@ function addEmployeeCard(name, position) { // main employee card container
 addEmployeeCard('Sam', 'Tester');
 addEmployeeCard('Eddy', 'Diagnostics');
 addEmployeeCard('Bob', 'Manager');
+
+// task 3
+function bulkUpdateEmployeeCards() {
+    const cards = document.querySelectorAll('.employee-card');
+    const cardArray = Array.from(cards);
+
+    cardArray.forEach(card => {
+        card.style.backgroundColor = 'lightgreen';
+    }); // function for bulk updating to cards
+}
+
+bulkUpdateEmployeeCards(); // activate bulk update function
