@@ -29,3 +29,39 @@ function addEmployeeCard(name, position) { // main employee card container
         event.stopPropagation();
         card.remove();
     });
+
+    // task 5
+    editButton.addEventListener('click', function() {
+        const nameInput = document.createElement('input');
+        nameInput.value = heading.textContent;
+
+        const positionInput = document.createElement('input');
+        positionInput.value = paragraph.textContent;
+
+        const saveButton = document.createElement('button');
+        saveButton.textContent = 'Save';
+        card.appendChild(positionInput);
+        
+        card.innerHTML = '';
+        card.appendChild(nameInput);
+        card.appendChild(position);
+        card.appendChild(saveButton);
+        card.appendChild(removeButton); // appending new functions
+
+        saveButton.addEventListener('click', function() {
+            heading.textContent = nameInput.value;
+            paragraph.textContent = positionInput.value; // save button listener
+
+            card.innerHTML = '';
+            card.appendChild(heading);
+            card.appendChild(paragraph);
+            card.appendChild(editButton);
+            card.appendChild(removeButton);
+        }); // event listener for save button
+    });
+}
+
+// example employees
+addEmployeeCard('Sam', 'Tester');
+addEmployeeCard('Eddy', 'Diagnostics');
+addEmployeeCard('Bob', 'Manager');
