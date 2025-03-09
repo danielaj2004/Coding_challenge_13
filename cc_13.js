@@ -62,9 +62,9 @@ function addEmployeeCard(name, position) { // main employee card container
 }
 
 // example employees
-addEmployeeCard('Sam', 'Tester');
-addEmployeeCard('Eddy', 'Diagnostics');
-addEmployeeCard('Bob', 'Manager');
+addEmployeeCard('Sam', 'Manager');
+addEmployeeCard('Eddy', 'Human Resources');
+addEmployeeCard('Bob', 'Receiver');
 
 // task 3
 function bulkUpdateEmployeeCards() {
@@ -72,7 +72,7 @@ function bulkUpdateEmployeeCards() {
     const cardArray = Array.from(cards);
 
     cardArray.forEach(card => {
-        card.style.backgroundColor = 'lightgreen';
+        card.style.backgroundColor = 'tan';
     }); // function for bulk updating to cards
 }
 
